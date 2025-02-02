@@ -1,0 +1,48 @@
+# Parallel Minimum Cut Algorithm Comparison
+# Based on Table 1 from dynamic_graph_cutting_comparison.tex
+
+algorithms = {
+    "DPGC": {
+        "time_complexity": "O(d log2 n)",
+        "memory_gb": 8.2,
+        "energy_kj": 42,
+        "convergence_stability": 0.92,
+        "scalability_factor": 0.98
+    },
+    "Parallel Push-Relabel": {
+        "time_complexity": "O(n2√m)",
+        "memory_gb": 14.7,
+        "energy_kj": 68,
+        "convergence_stability": 0.78,
+        "scalability_factor": 0.72
+    },
+    "Parallel Edmonds-Karp": {
+        "time_complexity": "O(mn2)",
+        "memory_gb": 18.3,
+        "energy_kj": 79,
+        "convergence_stability": 0.85,
+        "scalability_factor": 0.65
+    },
+    "Parallel Karger-Stein": {
+        "time_complexity": "O(n2 log n)",
+        "memory_gb": 12.1,
+        "energy_kj": 55,
+        "convergence_stability": 0.81,
+        "scalability_factor": 0.89
+    }
+}
+
+def time_complexity(d, n, p):
+    """Calculate DPGC time complexity according to equation in section 2.1"""
+    return d * (n / p) * (np.log(n / p) ** 2)
+
+def display_comparison():
+    """Display algorithm comparison in tabular format"""
+    print(f"{'Algorithm':<25} | {'Time Complexity':<15} | {'Memory (GB)':<10} | {'Energy (kJ)':<10} | {'Stability':<10} | {'Scalability':<10}")
+    print("-" * 95)
+    for algo, metrics in algorithms.items():
+        print(f"{algo:<25} | {metrics['time_complexity']:<15} | {metrics['memory_gb']:<10.1f} | {metrics['energy_kj']:<10} | {metrics['convergence_stability']:<10.2f} | {metrics['scalability_factor']:<10.2f}")
+
+if __name__ == "__main__":
+    import numpy as np
+    display_comparison()
