@@ -1,80 +1,81 @@
-Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
-This repository contains the source code and datasets for the research article "Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks" by Mohammad S. Joshan, José H. Saito, and Emerson C. Pedrino. The proposed algorithm optimizes the parallel Boykov-Kolmogorov (BK) algorithm to address convergence issues in large-scale stochastic flow networks (SFNs).
+Code for Efficient Minimum Cut Detection in Stochastic Networks
 
-Overview
-The study introduces a novel parallel framework and merging strategy for the BK algorithm, enabling:
+Resources and extra documentation for the manuscript "Efficient Minimum Cut Detection in Stochastic Networks". This repository contains all scripts required to reproduce the tables and figures presented in the paper.
 
-30% reduction in execution time for large graphs.
-40% reduction in memory usage.
-Enhanced scalability and energy efficiency.
-The algorithm was evaluated against existing methods (Ford-Fulkerson, Edmonds-Karp, Push-Relabel, Karger’s Algorithm) on a variety of graphs, ranging from small to large-scale networks.
+Code Organization
 
-Features
-Implementation of the Dynamic Parallel Graph Cuts Algorithm.
-Comparison with classical algorithms in terms of:
-Execution time
-Energy efficiency
-Memory usage
-Support for small, medium, and large graph datasets.
-Repository Contents
-src/: Source code implementing the algorithm in Python.
-datasets/: Sample graph datasets (small, medium, and large scale).
-results/: Precomputed results, including execution time and reliability analysis.
-docs/: Supporting documentation and the original research article.
-Requirements
-Python 3.8+
-Required libraries:
-NumPy
-NetworkX
-Matplotlib (optional, for visualizations)
-To install dependencies:
+The code is organized by type of process:
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Running the Code
-Clone this repository:
-bash
-Copy
-Edit
-git clone https://github.com/your-repo-url.git
-cd your-repo-url
-Run the main script to execute the algorithm:
-bash
-Copy
-Edit
-python main.py --graph datasets/graph1.json --algorithm parallel
-Use the --help flag for more options:
-bash
-Copy
-Edit
-python main.py --help
-Results
-Key findings from the study include:
+Pre-processing: Python
 
-The proposed algorithm achieves faster execution times compared to other methods, especially for large-scale graphs.
-The results demonstrate low variance across multiple runs, confirming the reliability of the approach.
-Detailed comparisons and statistical analyses are available in the published article.
-Citation
-If you use this code or data in your research, please cite our article:
+Graph Cutting Algorithms: C++
 
-bibtex
-Copy
-Edit
-@article{joshan2025parallel,
-  title={Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks},
-  author={Joshan, Mohammad Sadegh and Saito, José H. and Pedrino, Emerson C.},
-  journal={Journal of LaTeX Class Files},
-  volume={18},
-  number={9},
-  pages={1--7},
-  year={2024}
-}
-License
-This project is licensed under the MIT License.
+Comparative Analysis and Visualization: Jupyter Notebook
+
+Dataset and Subsets
+
+The dataset files are located in the folder "Dataset - Stochastic Flow Networks". Inside this folder, you will find:
+
+Original dataset: StochasticFlowNetworkData.csv
+
+Subdivisions for K-fold cross-validation: Found inside the "K-fold cross-validation" folder, categorized into k = 2, k = 3, k = 4, and k = 5. Each folder contains subsets labeled as D1, D2, D3, etc., in .txt format for easy integration into the code.
+
+Code Descriptions
+
+Pre-processing
+
+The pre-processing scripts are located in the folder "PYTHON - Pre-processing". These scripts handle:
+
+Data cleaning and transformation
+
+Feature extraction
+
+Graph representation generation
+
+You only need to provide the dataset in CSV format as described above.
+
+Graph Cutting Algorithms
+
+The core algorithm implementations are in the folder "C++ - Minimum Cut Algorithms", which contains:
+
+Ford-Fulkerson
+
+Edmonds-Karp
+
+Push-Relabel
+
+Karger’s Algorithm
+
+BK Algorithm
+
+Proposed Dynamic Parallel Graph Cutting Algorithm
+
+For each algorithm, the corresponding K-fold cross-validation divisions (K=2, K=3, K=4, K=5) are available. Each contains further divisions for training and testing, such as D1 training - D2 testing.
+
+Comparative Analysis and Visualization
+
+The Jupyter Notebook scripts in "Jupyter - Analysis" facilitate:
+
+Graph plotting
+
+Comparative performance analysis
+
+Table and figure generation as presented in the paper
+
+Notes
+
+The dataset is stored in a separate folder, but all C++ codes already have the respective dataset subdivisions placed in the training and testing sections for direct compilation.
+
+Scripts are well-commented to ensure reproducibility.
 
 Contact
-For questions or feedback, feel free to contact the authors:
 
-Mohammad S. Joshan: mohammad@estudante.ufscar.br
+For any inquiries or issues regarding the code, please contact the corresponding author of the paper.
+
+Repository Statistics
+
+Languages: C++ (Primary), Python, Jupyter Notebook
+
+Status: Actively maintained
+
+Thank you for using this repository. If you find it useful, consider citing our w
