@@ -7,7 +7,7 @@ The research introduces the **Dynamic Parallel Graph Cutting Algorithm (DPGCA)**
 
 ---
 
-## 📂 **Repository Structure**
+##  **Repository Structure**
 
 ### **1. Dataset and Experimental Data**
 Located in the `Dataset/` folder, including:
@@ -27,7 +27,7 @@ Scripts for processing input graphs and preparing them for evaluation.
   - Implementations of Ford-Fulkerson, Edmonds-Karp, Push-Relabel, Stoer-Wagner, Karger, and Karger-Stein.
   - **Files**: `ford_fulkerson.py`, `edmonds_karp.py`, etc.
 
-#### **Graph Cutting Algorithms (`C++ - Minimum Cut Algorithms/`)**
+#### **Graph Cutting Algorithms (`python - Minimum Cut Algorithms/`)**
 Contains implementations of:
 - **Ford-Fulkerson**
 - **Edmonds-Karp**
@@ -36,7 +36,7 @@ Contains implementations of:
 - **BK Algorithm**
 - **Proposed Dynamic Parallel Graph Cutting Algorithm**
 
-### **3. Comparative Analysis and Visualization (`Jupyter - Analysis/`)**
+### **3. Comparative Analysis and Visualization (`VSCode - Analysis/`)**
 Jupyter Notebook scripts for:
 - Graph visualization
 - Performance comparison
@@ -44,7 +44,7 @@ Jupyter Notebook scripts for:
 
 ---
 
-## 🚀 **Getting Started**
+##  **Getting Started**
 
 ### **Clone the Repository**
 ```bash
@@ -64,7 +64,7 @@ python generate_figures.py
 
 ---
 
-## 🔗 **Citation**
+##  **Citation**
 If you use this repository, please cite:
 ```bibtex
 @article{mohammad2024,
@@ -77,6 +77,6 @@ If you use this repository, please cite:
 
 ---
 
-## 📧 **Contact**
+##  **Contact**
 For questions or collaborations, feel free to reach out:
-📩 mohammad@estudante.ufscar.br
+ mohammad@estudante.ufscar.br
