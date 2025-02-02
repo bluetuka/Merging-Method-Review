@@ -1,81 +1,72 @@
-Code for Efficient Minimum Cut Detection in Stochastic Networks
+Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
+Code and Resources for the Manuscript
+This repository contains all the scripts and datasets required to reproduce the tables and figures presented in the manuscript "Efficient Minimum Cut Detection in Stochastic Networks". The work focuses on developing and evaluating a Dynamic Parallel Graph Cutting Algorithm, along with comparative analyses against traditional algorithms.
 
-Resources and extra documentation for the manuscript "Efficient Minimum Cut Detection in Stochastic Networks". This repository contains all scripts required to reproduce the tables and figures presented in the paper.
+Repository Structure
+1. Dataset and Experimental Data
+The datasets used in the experiments are located in the Dataset/ folder. This includes:
 
-Code Organization
+Graph Instances: A collection of generated stochastic network graphs used in benchmarking.
+Experimental Results: Precomputed outputs for different algorithms in .csv format, used for verification and reproducibility.
+2. Code for Experiments
+The implementation of the algorithms and related scripts are organized as follows:
 
-The code is organized by type of process:
+Preprocessing (Preprocessing/)
 
-Pre-processing: Python
+Scripts for processing input graphs and formatting them for algorithmic evaluation.
+File: preprocess.py
+Algorithm Implementations (Algorithms/)
 
-Graph Cutting Algorithms: C++
+Dynamic Parallel Graph Cutting Algorithm (DPGCA/)
+The main proposed method for efficient minimum cut detection.
+File: dynamic_parallel_cut.py
+Baseline Algorithms (Baselines/)
+Implementations of Ford-Fulkerson, Edmonds-Karp, Push-Relabel, Stoer-Wagner, Karger, and Karger-Stein for comparative analysis.
+Files: ford_fulkerson.py, edmonds_karp.py, etc.
+Experimental Evaluation (Experiments/)
 
-Comparative Analysis and Visualization: Jupyter Notebook
+Scripts to run benchmarks and generate performance metrics.
+File: run_experiments.py
+3. Reproducing the Results
+To reproduce the results from the paper, follow these steps:
 
-Dataset and Subsets
+Clone this repository:
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/mincut-experiments.git
+cd mincut-experiments
+Set up the environment:
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Run the preprocessing step:
+bash
+Copy
+Edit
+python preprocess.py
+Run experiments for a specific algorithm:
+bash
+Copy
+Edit
+python run_experiments.py --algorithm dynamic_parallel_cut
+Analyze results and generate figures:
+bash
+Copy
+Edit
+python generate_figures.py
+Citation
+If you use this work, please cite the following publication:
 
-The dataset files are located in the folder "Dataset - Stochastic Flow Networks". Inside this folder, you will find:
-
-Original dataset: StochasticFlowNetworkData.csv
-
-Subdivisions for K-fold cross-validation: Found inside the "K-fold cross-validation" folder, categorized into k = 2, k = 3, k = 4, and k = 5. Each folder contains subsets labeled as D1, D2, D3, etc., in .txt format for easy integration into the code.
-
-Code Descriptions
-
-Pre-processing
-
-The pre-processing scripts are located in the folder "PYTHON - Pre-processing". These scripts handle:
-
-Data cleaning and transformation
-
-Feature extraction
-
-Graph representation generation
-
-You only need to provide the dataset in CSV format as described above.
-
-Graph Cutting Algorithms
-
-The core algorithm implementations are in the folder "C++ - Minimum Cut Algorithms", which contains:
-
-Ford-Fulkerson
-
-Edmonds-Karp
-
-Push-Relabel
-
-Karger’s Algorithm
-
-BK Algorithm
-
-Proposed Dynamic Parallel Graph Cutting Algorithm
-
-For each algorithm, the corresponding K-fold cross-validation divisions (K=2, K=3, K=4, K=5) are available. Each contains further divisions for training and testing, such as D1 training - D2 testing.
-
-Comparative Analysis and Visualization
-
-The Jupyter Notebook scripts in "Jupyter - Analysis" facilitate:
-
-Graph plotting
-
-Comparative performance analysis
-
-Table and figure generation as presented in the paper
-
-Notes
-
-The dataset is stored in a separate folder, but all C++ codes already have the respective dataset subdivisions placed in the training and testing sections for direct compilation.
-
-Scripts are well-commented to ensure reproducibility.
-
+pgsql
+Copy
+Edit
+@article{mohammad2024,
+  title={Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks},
+  author={Mohammad, joshan},
+  journal={[IEEE Latin America]},
+  year={2024},
+}
 Contact
-
-For any inquiries or issues regarding the code, please contact the corresponding author of the paper.
-
-Repository Statistics
-
-Languages: C++ (Primary), Python, Jupyter Notebook
-
-Status: Actively maintained
-
-Thank you for using this repository. If you find it useful, consider citing our w
+For any questions or collaborations, please contact: mohammad@estudante.ufscar.br
