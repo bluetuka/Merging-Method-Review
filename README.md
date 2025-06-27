@@ -31,7 +31,7 @@ python main.py
 ```
 
 This will execute the project and generate outputs (plots, logs, etc.) in the console or in designated output files.
----
+
 ## 🛠 Troubleshooting
 
 - **Python version: Confirm you’re using Python 3.x:**
