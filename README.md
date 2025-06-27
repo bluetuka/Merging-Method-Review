@@ -1,6 +1,8 @@
-# **Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks**
+Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
+---
+This repository provides all the necessary code and resources to reproduce the results presented in the manuscript: "Efficient Minimum Cut Detection in Stochastic Networks."
 
-# 🚀 Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
+The research introduces the Dynamic Parallel Graph Cutting Algorithm (DPGCA) and includes comparative analyses against traditional minimum cut algorithms.
 ---
 ## 🔧 Setup & Usage
 ---
@@ -9,8 +11,8 @@ Clone or download the repository to your local machine.
 
 **Using Git:**
 ```bash
-git clone https://github.com/bluetuka/Merging-Method-Review 
-cd your-repo
+git clone https://github.com/bluetuka/Merging-Method-Review.git
+cd Merging-Method-Review
 
 Or click Download ZIP, extract it, then open the extracted folder.
 
