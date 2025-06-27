@@ -1,82 +1,43 @@
 # **Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks**
 
-This repository provides all the necessary code and resources to reproduce the results presented in the manuscript:
-**"Efficient Minimum Cut Detection in Stochastic Networks."**
-
-The research introduces the **Dynamic Parallel Graph Cutting Algorithm (DPGCA)** and includes comparative analyses against traditional minimum cut algorithms.
-
+# 🚀 Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
 ---
-
-##  **Repository Structure**
-
-### **1. Dataset and Experimental Data**
-Located in the `Dataset/` folder, including:
-- **Graph Instances**: Stochastic network graphs used for benchmarking.
-- **Experimental Results**: Precomputed outputs in `.csv` format for verification and reproducibility.
-
-### **2. Code for Experiments**
-#### **Preprocessing (`Preprocessing/`)**
-Scripts for processing input graphs and preparing them for evaluation.
-- **File**: `preprocess.py`
-
-#### **Algorithm Implementations (`Algorithms/`)**
-- **Dynamic Parallel Graph Cutting Algorithm (`DPGCA/`)**
-  - The primary proposed method for efficient minimum cut detection.
-  - **File**: `dynamic_parallel_cut.py`
-- **Baseline Algorithms (`Baselines/`)**
-  - Implementations of Ford-Fulkerson, Edmonds-Karp, Push-Relabel, Stoer-Wagner, Karger, and Karger-Stein.
-  - **Files**: `ford_fulkerson.py`, `edmonds_karp.py`, etc.
-
-#### **Graph Cutting Algorithms (`python - Minimum Cut Algorithms/`)**
-Contains implementations of:
-- **Ford-Fulkerson**
-- **Edmonds-Karp**
-- **Push-Relabel**
-- **Karger’s Algorithm**
-- **BK Algorithm**
-- **Proposed Dynamic Parallel Graph Cutting Algorithm**
-
-### **3. Comparative Analysis and Visualization (`VSCode - Analysis/`)**
-Jupyter Notebook scripts for:
-- Graph visualization
-- Performance comparison
-- Generating tables and figures from the paper
-
+## 🔧 Setup & Usage
 ---
+### 1. Download the Project Files
+Clone or download the repository to your local machine.
 
-##  **Getting Started**
-
-### **Clone the Repository**
+**Using Git:**
 ```bash
-git clone https://github.com/bluetuka/Merging-Method-Review
-cd mincut-experiments
-```
+git clone https://github.com/bluetuka/Merging-Method-Review 
+cd your-repo
 
-### **Run Experiments for a Specific Algorithm**
+Or click Download ZIP, extract it, then open the extracted folder.
+
+### 2. Install Python & Required Libraries
+Make sure you have Python 3.x installed. Install the necessary libraries:
+
 ```bash
-python run_experiments.py --algorithm dynamic_parallel_cut
-```
+pip install numpy matplotlib pandas psutil
 
-### **Generate Figures and Analyze Results**
+### 3. Run the Main Script
+
 ```bash
-python generate_figures.py
-```
+python main.py
 
+This will execute the project and generate outputs (plots, logs, etc.) in the console or in designated output files.
 ---
-
-##  **Citation**
-If you use this repository, please cite:
-```bibtex
-@article{mohammad2024,
-  title={Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks},
-  author={Mohammad, Joshan},
-  journal={IEEE Latin America},
-  year={2024}
-}
-```
-
+## 🛠 Troubleshooting
 ---
+- **Python version: Confirm you’re using Python 3.x:**
 
-##  **Contact**
-For questions or collaborations, feel free to reach out:
- mohammad@estudante.ufscar.br
+```bash
+python --version
+
+- **Running in virtual environment (recommended):**
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
