@@ -13,6 +13,7 @@ Clone or download the repository to your local machine.
 ```bash
 git clone https://github.com/bluetuka/Merging-Method-Review.git
 cd Merging-Method-Review
+```
 
 Or click Download ZIP, extract it, then open the extracted folder.
 
@@ -21,11 +22,13 @@ Make sure you have Python 3.x installed. Install the necessary libraries:
 
 ```bash
 pip install numpy matplotlib pandas psutil
+```
 
 ### 3. Run the Main Script
 
 ```bash
 python main.py
+```
 
 This will execute the project and generate outputs (plots, logs, etc.) in the console or in designated output files.
 ---
@@ -35,6 +38,7 @@ This will execute the project and generate outputs (plots, logs, etc.) in the co
 
 ```bash
 python --version
+```
 
 - **Running in virtual environment (recommended):**
 
@@ -43,3 +47,4 @@ python -m venv venv
 source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 pip install -r requirements.txt
+```
