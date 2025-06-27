@@ -2,7 +2,7 @@
 
 This repository provides all the necessary code and resources to reproduce the results presented in the manuscript: "Efficient Minimum Cut Detection in Stochastic Networks."
 The research introduces the Dynamic Parallel Graph Cutting Algorithm (DPGCA) and includes comparative analyses against traditional minimum cut algorithms.
----
+
 ## 🔧 Setup & Usage
 
 ### 1. Download the Project Files
