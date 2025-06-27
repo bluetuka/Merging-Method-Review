@@ -1,11 +1,10 @@
 Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
 ---
 This repository provides all the necessary code and resources to reproduce the results presented in the manuscript: "Efficient Minimum Cut Detection in Stochastic Networks."
-
 The research introduces the Dynamic Parallel Graph Cutting Algorithm (DPGCA) and includes comparative analyses against traditional minimum cut algorithms.
 ---
 ## 🔧 Setup & Usage
----
+
 ### 1. Download the Project Files
 Clone or download the repository to your local machine.
 
@@ -33,7 +32,7 @@ python main.py
 This will execute the project and generate outputs (plots, logs, etc.) in the console or in designated output files.
 ---
 ## 🛠 Troubleshooting
----
+
 - **Python version: Confirm you’re using Python 3.x:**
 
 ```bash
