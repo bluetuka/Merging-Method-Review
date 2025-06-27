@@ -1,5 +1,5 @@
-Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
----
+# Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks
+
 This repository provides all the necessary code and resources to reproduce the results presented in the manuscript: "Efficient Minimum Cut Detection in Stochastic Networks."
 The research introduces the Dynamic Parallel Graph Cutting Algorithm (DPGCA) and includes comparative analyses against traditional minimum cut algorithms.
 ---
@@ -47,3 +47,17 @@ source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
+##  **Citation**
+If you use this repository, please cite:
+```bibtex
+@article{mohammad2024,
+  title={Improved Parallel Algorithm for Finding Minimum Cuts in Stochastic Flow Networks},Add commentMore actions
+  author={Mohammad, Joshan},
+  journal={IEEE Latin America},
+  year={2024}
+}
+```
+
+##  **Contact**Add commentMore actions
+For questions or collaborations, feel free to reach out:
+ mohammad@estudante.ufscar.br
